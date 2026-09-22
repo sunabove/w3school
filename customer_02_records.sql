@@ -11,10 +11,6 @@ SET time_zone = "+00:00";
 
 USE mydb;
 
---
--- Dumping data for table categories
---
-
 INSERT INTO categories (CategoryID, CategoryName, Description) VALUES
 (1, 'Beverages', 'Soft drinks, coffees, teas, beers, and ales'),
 (2, 'Condiments', 'Sweet and savory sauces, relishes, spreads, and seasonings'),
@@ -24,10 +20,6 @@ INSERT INTO categories (CategoryID, CategoryName, Description) VALUES
 (6, 'Meat/Poultry', 'Prepared meats'),
 (7, 'Produce', 'Dried fruit and bean curd'),
 (8, 'Seafood', 'Seaweed and fish');
-
---
--- Dumping data for table customers
---
 
 INSERT INTO customers (CustomerID, CustomerName, ContactName, Address, City, PostalCode, Country) VALUES
 (1, 'Alfreds Futterkiste', 'Maria Anders', 'Obere Str. 57', 'Berlin', '12209', 'Germany'),
@@ -122,10 +114,6 @@ INSERT INTO customers (CustomerID, CustomerName, ContactName, Address, City, Pos
 (90, 'Wilman Kala', 'Matti Karttunen', 'Keskuskatu 45', 'Helsinki', '21240', 'Finland'),
 (91, 'Wolski', 'Zbyszek', 'ul. Filtrowa 68', 'Walla', '01-012', 'Poland');
 
---
--- Dumping data for table employees
---
-
 INSERT INTO employees (EmployeeID, LastName, FirstName, BirthDate, Photo, Notes) VALUES
 (1, 'Davolio', 'Nancy', '1968-12-08', 'EmpID1.pic', 'Education includes a BA in psychology from Colorado State University. She also completed (The Art of the Cold Call). Nancy is a member of \'Toastmasters International\'.'),
 (2, 'Fuller', 'Andrew', '1952-02-19', 'EmpID2.pic', 'Andrew received his BTS commercial and a Ph.D. in international marketing from the University of Dallas. He is fluent in French and Italian and reads German. He joined the company as a sales representative, was promoted to sales manager and was then named vice president of sales. Andrew is a member of the Sales Management Roundtable, the Seattle Chamber of Commerce, and the Pacific Rim Importers Association.'),
@@ -137,10 +125,6 @@ INSERT INTO employees (EmployeeID, LastName, FirstName, BirthDate, Photo, Notes)
 (8, 'Callahan', 'Laura', '1958-01-09', 'EmpID8.pic', 'Laura received a BA in psychology from the University of Washington. She has also completed a course in business French. She reads and writes French.'),
 (9, 'Dodsworth', 'Anne', '1969-07-02', 'EmpID9.pic', 'Anne has a BA degree in English from St. Lawrence College. She is fluent in French and German.'),
 (10, 'West', 'Adam', '1928-09-19', 'EmpID10.pic', 'An old chum.');
-
---
--- Dumping data for table orders
---
 
 INSERT INTO orders (OrderID, CustomerID, EmployeeID, OrderDate, ShipperID) VALUES
 (10248, 90, 5, '1996-07-04', 3),
@@ -864,10 +848,6 @@ INSERT INTO order_details (OrderDetailID, OrderID, ProductID, Quantity) VALUES
 (517, 10443, 11, 6),
 (518, 10443, 28, 12);
 
---
--- Dumping data for table products
---
-
 INSERT INTO products (ProductID, ProductName, SupplierID, CategoryID, Unit, Price) VALUES
 (1, 'Chais', 1, 1, '10 boxes x 20 bags', 18),
 (2, 'Chang', 1, 1, '24 - 12 oz bottles', 19),
@@ -947,18 +927,10 @@ INSERT INTO products (ProductID, ProductName, SupplierID, CategoryID, Unit, Pric
 (76, 'Lakkalikööri', 23, 1, '500 ml', 18),
 (77, 'Original Frankfurter grüne Soße', 12, 2, '12 boxes', 13);
 
---
--- Dumping data for table shippers
---
-
 INSERT INTO shippers (ShipperID, ShipperName, Phone) VALUES
 (1, 'Speedy Express', '(503) 555-9831'),
 (2, 'United Package', '(503) 555-3199'),
 (3, 'Federal Shipping', '(503) 555-9931');
-
---
--- Dumping data for table suppliers
---
 
 INSERT INTO suppliers (SupplierID, SupplierName, ContactName, Address, City, PostalCode, Country, Phone) VALUES
 (1, 'Exotic Liquid', 'Charlotte Cooper', '49 Gilbert St.', 'Londona', 'EC1 4SD', 'UK', '(171) 555-2222'),
