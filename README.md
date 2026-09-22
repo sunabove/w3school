@@ -1,2 +1,2 @@
-# w3school
-w3 schools exercise files
+# w3school exercise files
+- mysql script files
