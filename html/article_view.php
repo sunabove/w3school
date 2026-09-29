@@ -66,7 +66,13 @@ if (!$article) {
                 <?php echo nl2br(htmlspecialchars($article["content"] ?? "")); ?>
             </div>
             <div class="card-footer bg-white text-end">
+                <a href="article_update.php?article_id=<?php echo urlencode($article["article_id"]); ?>" class="btn btn-primary">수정</a>
                 <a href="article_list.php?board_id=<?php echo urlencode($article["board_id"]); ?>" class="btn btn-outline-secondary">목록</a>
+                <form method="post" action="article_delete.php" class="d-inline"
+                      onsubmit="return confirm('이 게시글을 삭제하시겠습니까?');">
+                    <input type="hidden" name="article_id" value="<?php echo htmlspecialchars($article["article_id"]); ?>">
+                    <button type="submit" class="btn btn-danger">삭제</button>
+                </form>
             </div>
         </div>
     </div>

@@ -53,7 +53,10 @@ $result = mysqli_stmt_get_result($stmt);
                 <h1 class="mb-1"><?php echo htmlspecialchars($board["board_name"]); ?></h1>
                 <p class="text-muted mb-0"><?php echo htmlspecialchars($board["description"]); ?></p>
             </div>
-            <a href="board.php" class="btn btn-outline-secondary">게시판 목록</a>
+            <div>
+                <a href="article_insert.php?board_id=<?php echo urlencode($board_id); ?>" class="btn btn-primary">글쓰기</a>
+                <a href="board.php" class="btn btn-outline-secondary">게시판 목록</a>
+            </div>
         </div>
         <div class="card shadow-sm">
             <div class="table-responsive">
