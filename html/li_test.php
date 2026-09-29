@@ -6,7 +6,7 @@
 
 	<ul>
 	<?php
-		$max = rand(1, 10);
+		$max = rand(1, 100);
 		$num = rand(1, $max); 
 		for ($i = 1; $i <= $num; $i++) {
 			echo "<li>" . $i . "</li>";
