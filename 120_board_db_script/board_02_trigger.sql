@@ -4,6 +4,10 @@
 
 USE mydb ;
 
+DROP TRIGGER IF EXISTS article_after_insert;
+DROP TRIGGER IF EXISTS article_after_update;
+DROP TRIGGER IF EXISTS article_after_delete;
+
 -- ============================================================
 -- Trigger
 -- ============================================================
