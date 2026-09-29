@@ -26,6 +26,7 @@ if (!$result) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>게시판 목록</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="bg-light">
     <div class="container py-5">
@@ -44,7 +45,7 @@ if (!$result) {
                     </thead>
                     <tbody>
                         <?php while ($row = mysqli_fetch_assoc($result)): ?>
-                        <tr>
+                        <tr role="button" onclick="location.href='article.php?board_id=<?php echo urlencode($row["board_id"]); ?>'">
                             <td class="text-center"><?php echo htmlspecialchars($row["board_id"]); ?></td>
                             <td class="fw-semibold"><?php echo htmlspecialchars($row["board_name"]); ?></td>
                             <td class="text-muted"><?php echo htmlspecialchars($row["description"]); ?></td>
@@ -57,7 +58,6 @@ if (!$result) {
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 <?php
