@@ -73,7 +73,7 @@ $result = mysqli_stmt_get_result($stmt);
                         </tr>
                         <?php endif; ?>
                         <?php while ($row = mysqli_fetch_assoc($result)): ?>
-                        <tr>
+                        <tr role="button" onclick="location.href='article_view.php?article_id=<?php echo urlencode($row["article_id"]); ?>'">
                             <td class="text-center"><?php echo htmlspecialchars($row["article_id"]); ?></td>
                             <td class="fw-semibold"><?php echo htmlspecialchars($row["title"]); ?></td>
                             <td class="text-center"><?php echo htmlspecialchars($row["author"]); ?></td>
