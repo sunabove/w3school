@@ -1,6 +1,8 @@
 -- ============================================================
 -- Test Data
+-- sudo mysql -u root -p mydb < 120_board_db_script/board_03_insert.sql
 -- ============================================================
+
 USE mydb ;
 
 INSERT INTO board (
