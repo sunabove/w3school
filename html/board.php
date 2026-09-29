@@ -45,7 +45,7 @@ if (!$result) {
                     </thead>
                     <tbody>
                         <?php while ($row = mysqli_fetch_assoc($result)): ?>
-                        <tr role="button" onclick="location.href='article.php?board_id=<?php echo urlencode($row["board_id"]); ?>'">
+                        <tr role="button" onclick="location.href='article_list.php?board_id=<?php echo urlencode($row["board_id"]); ?>'">
                             <td class="text-center"><?php echo htmlspecialchars($row["board_id"]); ?></td>
                             <td class="fw-semibold"><?php echo htmlspecialchars($row["board_name"]); ?></td>
                             <td class="text-muted"><?php echo htmlspecialchars($row["description"]); ?></td>

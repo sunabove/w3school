@@ -47,7 +47,7 @@ if (!$article) {
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="board.php">게시판 목록</a></li>
-                <li class="breadcrumb-item"><a href="article.php?board_id=<?php echo urlencode($article["board_id"]); ?>"><?php echo htmlspecialchars($article["board_name"]); ?></a></li>
+                <li class="breadcrumb-item"><a href="article_list.php?board_id=<?php echo urlencode($article["board_id"]); ?>"><?php echo htmlspecialchars($article["board_name"]); ?></a></li>
                 <li class="breadcrumb-item active" aria-current="page"><?php echo htmlspecialchars($article["article_id"]); ?></li>
             </ol>
         </nav>
@@ -66,7 +66,7 @@ if (!$article) {
                 <?php echo nl2br(htmlspecialchars($article["content"] ?? "")); ?>
             </div>
             <div class="card-footer bg-white text-end">
-                <a href="article.php?board_id=<?php echo urlencode($article["board_id"]); ?>" class="btn btn-outline-secondary">목록</a>
+                <a href="article_list.php?board_id=<?php echo urlencode($article["board_id"]); ?>" class="btn btn-outline-secondary">목록</a>
             </div>
         </div>
     </div>
